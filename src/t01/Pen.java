@@ -5,16 +5,16 @@ import java.util.Objects;
 /**
  * Describes a regular pen with specified color and type.
  *
- * Pen can be any defined in {@link t01.Colors Colors} color and any defined in {@link t01.Types Types} type.
+ * Pen can be any defined in {@link t01.Colors Colors} color and any defined in {@link PenTypes Types} type.
  * Since an amount of ink in a pen is limited, you can write only limited amount of letters.
  *
  */
-public class Pen {
+class Pen {
     private Colors color;
-    private Types type;
+    private PenTypes type;
     private int inkRemain;
 
-    public Pen(Colors color, Types type) {
+    public Pen(Colors color, PenTypes type) {
         this.color = color;
         this.type = type;
         this.inkRemain = 1000;
@@ -23,10 +23,10 @@ public class Pen {
         this(pen.color, pen.type);
     }
     public Pen(String color, String type) {
-        this(Colors.valueOf(color.toUpperCase()), Types.valueOf(type.toUpperCase()));
+        this(Colors.valueOf(color.toUpperCase()), PenTypes.valueOf(type.toUpperCase()));
     }
     public Pen() {
-        this(Colors.BLUE, Types.BALLPOINT);
+        this(Colors.BLUE, PenTypes.BALLPOINT);
     }
 
     public int getInkRemain() {
@@ -35,7 +35,7 @@ public class Pen {
     public Colors getColor() {
         return color;
     }
-    public Types getType() {
+    public PenTypes getType() {
         return type;
     }
 
@@ -79,8 +79,8 @@ public class Pen {
     @Override
     public String toString() {
         return "This is a "
-                + color.toString().toLowerCase() + " "
-                + type.toString().toLowerCase() + " pen "
+                + color + " "
+                + type + " pen "
                 + "using which you can write " + inkRemain + " letter(s)";
     }
 }

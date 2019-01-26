@@ -1,6 +1,6 @@
 package t01;
 
-public class EmptyPenException extends Exception {
+class EmptyPenException extends Exception {
     private int remain;
     EmptyPenException(int remain) {
         this.remain = remain;

@@ -1,9 +1,9 @@
 package t01;
 
-public class PenDemo {
+class PenDemo {
     public static void main(String[] args) {
         Pen redPen = new Pen("red", "fountain");
-        Pen bluePen = new Pen(Colors.BLUE, Types.GEL);
+        Pen bluePen = new Pen(Colors.BLUE, PenTypes.GEL);
 
         try {
             redPen.write("I'm done!");
