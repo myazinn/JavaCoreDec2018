@@ -11,28 +11,22 @@ import t03.storage.Notebook;
 import t03.storage.Paper;
 import t03.storage.Stickers;
 
+import java.util.Set;
+
 
 public class BeginnerKit {
 
-    public Notebook notebook;
-    public Stickers stickers;
-    public Paper paper;
-    public Pen redPen;
-    public Pen blackPen;
-    public Pencil pencil;
-    public Scissors scissors;
-    public Tape tape;
-    public Stapler stapler;
+    Set<StationeryClass> beginnerSet;
 
     public BeginnerKit(){
-        notebook =  new Notebook("My notebook");
-        stickers = new Stickers("Don't forget");
-        paper = new Paper();
-        redPen = new Pen(Colors.RED, PenTypes.ROLLERBALL);
-        blackPen = new Pen(Colors.BLACK, PenTypes.FOUNTAIN);
-        pencil = new Pencil();
-        scissors = new Scissors();
-        tape = new Tape();
-        stapler = new Stapler();
+        beginnerSet.add(new Notebook("My notebook"));
+        beginnerSet.add(new Stickers("Don't forget"));
+        beginnerSet.add(new Paper());
+        beginnerSet.add(new Pen(Colors.RED, PenTypes.ROLLERBALL));
+        beginnerSet.add(new Pen(Colors.BLACK, PenTypes.FOUNTAIN));
+        beginnerSet.add(new Pencil());
+        beginnerSet.add(new Scissors());
+        beginnerSet.add(new Tape());
+        beginnerSet.add(new Stapler());
     }
 }
