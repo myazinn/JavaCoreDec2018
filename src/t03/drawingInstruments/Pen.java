@@ -9,7 +9,7 @@ public class Pen extends DrawingInstruments {
     private PenTypes penType;
 
     public Pen(Colors color, PenTypes type) {
-        super(Stationery.PEN.getPrice(), color);
+        super(Stationery.PEN.getPrice(), Stationery.PEN.name() + " (" + color + ")", color);
         penType = type;
     }
     public Pen() {

@@ -6,7 +6,7 @@ import t02.Stationery;
 public class Pencil extends DrawingInstruments {
 
     public Pencil(Colors color) {
-        super(Stationery.PENCIL.getPrice(), color);
+        super(Stationery.PENCIL.getPrice(), Stationery.PENCIL.name() + " (" + color + ")", color);
     }
     public Pencil() {
         this(Colors.BLACK);

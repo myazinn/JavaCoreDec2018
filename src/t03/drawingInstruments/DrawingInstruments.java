@@ -6,8 +6,8 @@ import t03.StationeryClass;
 abstract class DrawingInstruments extends StationeryClass {
     private Colors color;
 
-    DrawingInstruments(int price, Colors color) {
-        super(price);
+    DrawingInstruments(int price, String name, Colors color) {
+        super(price, name);
         this.color = color;
     }
 

@@ -6,10 +6,10 @@ import java.util.HashSet;
 
 public class Stickers extends Storage{
 
-    HashSet<String> stickers = new HashSet<>();
+    private HashSet<String> stickers = new HashSet<>();
 
     public Stickers() {
-        super(Stationery.STICKERS.getPrice());
+        super(Stationery.STICKERS.getPrice(), Stationery.STICKERS.name());
     }
 
     public Stickers(String entry) {

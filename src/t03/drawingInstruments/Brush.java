@@ -5,7 +5,7 @@ import t02.Stationery;
 
 public class Brush extends DrawingInstruments{
     public Brush(Colors color) {
-        super(Stationery.BRUSH.getPrice(), color);
+        super(Stationery.BRUSH.getPrice(), Stationery.BRUSH.name() + " (" + color + ")", color);
     }
 
     public Brush(){

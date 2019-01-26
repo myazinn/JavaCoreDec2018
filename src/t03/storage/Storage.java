@@ -8,8 +8,8 @@ abstract class Storage extends StationeryClass {
 
     Scanner scanner = new Scanner(System.in);
 
-    Storage(int price) {
-        super(price);
+    Storage(int price, String name) {
+        super(price, name);
     }
 
     abstract void showAll();

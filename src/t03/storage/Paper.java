@@ -6,7 +6,7 @@ public class Paper extends Storage{
     private String entry;
 
     public Paper(){
-        super(Stationery.PAPER.getPrice());
+        super(Stationery.PAPER.getPrice(), Stationery.PAPER.name());
     }
     public Paper(String entry) {
         this();

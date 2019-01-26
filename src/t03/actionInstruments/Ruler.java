@@ -6,7 +6,7 @@ public class Ruler extends ActionInstruments {
     private int length;
 
     public Ruler(int length) {
-        super(Stationery.RULER.getPrice(), length + "rule them all");
+        super(Stationery.RULER.getPrice(), Stationery.RULER.name() + length + " cm ",length + "rule them all");
         this.length = length;
     }
 

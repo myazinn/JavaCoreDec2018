@@ -9,7 +9,7 @@ public class Notebook extends Storage {
     ArrayList<String> body = new ArrayList<>();
 
     public Notebook(){
-        super(Stationery.NOTEBOOK.getPrice());
+        super(Stationery.NOTEBOOK.getPrice(), Stationery.NOTEBOOK.name());
     }
     public Notebook(String entry){
         this();
