@@ -1,5 +1,8 @@
 package t06;
 
+import t07.MyAnnotation;
+
+@MyAnnotation(device = "General Purpose Nuclear Submarine")
 public class NuclearSubmarine implements Runnable {
 
     private NuclearSubmarineEngine engine;
