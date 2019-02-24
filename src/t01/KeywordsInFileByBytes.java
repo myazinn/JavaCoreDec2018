@@ -1,19 +1,18 @@
 package t01;
 
 import java.io.*;
-import java.util.Map;
 
 public class KeywordsInFileByBytes extends KeywordsInFile {
-    public KeywordsInFileByBytes(String file) {
+    KeywordsInFileByBytes(String file) {
         super(file);
     }
 
-    public KeywordsInFileByBytes(File file) {
+    KeywordsInFileByBytes(File file) {
         super(file);
     }
 
     @Override
-    JavaKeywords findKeywordUsages() {
+    public JavaKeywords findKeywordUsages() {
         {
             JavaKeywords javaKeywords = new JavaKeywords();
 
@@ -43,15 +42,9 @@ public class KeywordsInFileByBytes extends KeywordsInFile {
     }
 
     @Override
-    void printKeywordUsages(JavaKeywords javaKeywords, File outputFile) {
+    public void printKeywordUsages(JavaKeywords javaKeywords, File outputFile) {
         try (PrintStream printStream = new PrintStream(outputFile)){
-            for (Map.Entry<String, Integer> stringIntegerEntry : javaKeywords.getUsages().entrySet()) {
-
-                printStream.print(stringIntegerEntry.getKey());
-                printStream.print(": ");
-                printStream.println(stringIntegerEntry.getValue());
-
-            }
+            javaKeywords.getUsages().forEach((keyword, value) -> printStream.println(keyword + ": " + value));
         } catch (IOException e) {
             e.printStackTrace();
         }

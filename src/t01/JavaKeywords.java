@@ -19,7 +19,7 @@ public class JavaKeywords {
 
     private Map<String, Integer> keywordsMap;
 
-    JavaKeywords(){
+    public JavaKeywords(){
         keywordsMap = new HashMap<>();
 
         for (String keyword : keywords) {

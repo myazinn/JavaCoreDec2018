@@ -29,7 +29,7 @@ public abstract class KeywordsInFile {
 
     }
 
-    abstract void printKeywordUsages(JavaKeywords javaKeywords, File outputFile);
+    public abstract void printKeywordUsages(JavaKeywords javaKeywords, File outputFile);
 
-    abstract JavaKeywords findKeywordUsages();
+    public abstract JavaKeywords findKeywordUsages();
 }
