@@ -12,6 +12,12 @@ import java.util.Set;
 class PropertyParser {
     private final Map<String, String> properties = new HashMap<>();
 
+    /**
+     * Factory for a PropertyParser
+     * @param propertyPath path to a property file
+     * @return PropertyParser object
+     * @throws IOException if couldn't find a property file to read or property file isn't properly formatted
+     */
     static PropertyParser of(String propertyPath) throws IOException {
         return new PropertyParser(Path.of(propertyPath));
     }
@@ -23,6 +29,12 @@ class PropertyParser {
         parseProperty(path);
     }
 
+    /**
+     * Returns the value corresponding to the specified key
+     * @param key key of the value
+     * @return value from property file corresponding to the specified key
+     * @throws IllegalArgumentException if key property file does not contain that key
+     */
     String getValue(String key) {
         if (!containsKey(key)) {
             throw new IllegalArgumentException("key \"" + key + "\" does not exist in a property");
@@ -31,10 +43,19 @@ class PropertyParser {
         return properties.get(key);
     }
 
+    /**
+     * Check if a property file contains specified key
+     * @param key a key to check in property file
+     * @return true if contains; else otherwise
+     */
     boolean containsKey(String key) {
         return properties.containsKey(key);
     }
 
+    /**
+     * Allows to get all keys in a property file
+     * @return set of all keys in a property file
+     */
     Set<String> keySet(){
         return properties.keySet();
     }
